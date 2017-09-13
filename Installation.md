@@ -22,7 +22,9 @@ onder het kopje met [First Steps](https://laravel.com/docs/5.5/homestead#first-s
 Maak een repository aan op GitHub.com
 en clone deze naar een lokale folder. 
 
-`GIT CLONE https://github.com/link/to/[reponame].git`
+```
+GIT CLONE https://github.com/link/to/[reponame].git
+```
 
 <a id="chapter-2"></a>
 ## Stap 2 - configureer Homestead.yaml
@@ -85,22 +87,30 @@ databases:
 
 Om de verandering van kracht te laten worden moet vagrant herstart worden. Tik het volgende commando in de terminal van de Homestead folder:
 
-`vagrant up --provision` 
+```
+vagrant up --provision
+```
 
 Om de VM normaal te starten volstaat:
 
-`vagrant up`
+```
+vagrant up
+```
 
 <a id="chapter-3"></a>
 ## Stap 3 - ssh Homestead
 
 Je kunt via ssh toegang krijgen tot de VM. Navigeer naar je Homestead folder in de terminal en voer het volgende commando uit:
 
-`vagrant ssh`
+```
+vagrant ssh
+```
 
 Als dit niet lukt kun je ook het volgende proberen: 
 
-`ssh vagrant@192.168.10.10` (wachtwoord: _vagrant_)
+```
+ssh vagrant@192.168.10.10 (wachtwoord: vagrant)
+```
 
 Je staat nu in de root folder van de VM. Met het commando `ls` kun je de inhoud bekijken. Met `ls -al` kan je ook hidden folders zien. 
 Je ziet nu een folder met de naam **Code**. Hierin staan de laravel-projecten. 
@@ -113,18 +123,24 @@ Met het commando `cd Code` kom je in de Code directory. Wanneer je nu weer `ls` 
 Als je via ssh toegang hebt tot de VM
 navigeer dan naar de folder waar de laravel intallatie gedaan moet worden. In mijn geval: 
 
-`cd laravel-start-project`
+```
+cd laravel-start-project
+```
 
 Om een nieuw project aan te maken gebruik je het commando: 
 
-`larvel new`
+```
+larvel new
+```
 
 <a id="chapter-5"></a>
 ## Stap 5 - generate application key
 
 Via de terminal voer je in de root van het project het volgende commando uit: 
 
-`php artisan key:generate`
+```
+php artisan key:generate
+```
 
 <a id="chapter-6"></a>
 ## Stap 6 - aanpassen hosts file
@@ -132,13 +148,17 @@ Via de terminal voer je in de root van het project het volgende commando uit:
 Het domein waarop de site geserveerd moet worden, moet worden toegevoegd aan je hosts file. 
 
 Mac (in terminal)
-`sudo nano /etc/hosts`
+```
+sudo nano /etc/hosts
+```
 
 Windows: hosts file is in `C:\Windows\System32\drivers\etc\hosts`
 
 Voeg het gewenste domein toe. Dit is een vrije keuze: 
 
-`192.168.10.10  laravel.start.app`
+```
+192.168.10.10  laravel.start.app
+```
 
 Mac: `CTRL + x` om uit nano te komen. `Y` voor opslaan, `enter` voor overschrijven.
 
