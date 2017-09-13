@@ -16,7 +16,5 @@
     </div>
     {!! Form::submit() !!}
     {!! Form::close() !!}
-
-    {{ link_to('/', 'hoi') }}
 </body>
 </html>
